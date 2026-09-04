@@ -35,7 +35,6 @@ class ProductController extends Controller
     public function destroy($id){
         $product = Product::findOrFail($id);
         $product->delete();
-        $products = Product::all(); 
-        return view('product.index', compact('products'));
+        return view('product.destroy');
     }
 }
